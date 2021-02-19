@@ -9,7 +9,7 @@ Assume (realistic cases will have exceptions that will be dealt with gradually) 
 
 Assume further that this term is REFERENCED in multiple other parts, i.e. `ref(t_i)={p_k,p_{k+1},...}`. 
 
-Then every part `p_i` has CHILDREN, namely `children(p_i) = {p_j s.t. p_j ∈ ref(t_i) for some t_i ∈def(p_j)}`. This defines a DIGRAPH: a set of textparts and a set of ordered parts of textparts. 
+Then every part `p_i` has CHILDREN, namely `children(p_i) = {p_j s.t. p_j ∈ ref(t_i) for some t_i ∈def(p_j)}`. This defines a DIGRAPH: a set of textparts and a set of ordered parts of textparts. *(Look at `prisoner_schema.sql` if none of this makes sense.)*
 
 Some digraphs are acyclic, meaning no textpart is its own child. In these cases, it's possible to obtain a TOPOLOGICAL ORDERING of textparts, meaning a plain ordered list of textparts where every parent happens before its children (but not always immediately before). 
 
